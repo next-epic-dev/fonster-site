@@ -6,12 +6,14 @@
 a.btn{display:inline-block;background:#E8A24B;color:#20170B;padding:15px 26px;border-radius:16px;font-weight:700;text-decoration:none;margin-top:10px}
 p{color:#9AA3B2}</style></head><body><div class="card">
 <h1>Du är inbjuden till Fönster</h1>
-<p>Ladda ned appen och skriv in koden — inget konto behövs.</p>
+<p>Hämta appen, öppna den här länken igen — så kommer du rakt in. Inget konto behövs.</p>
 <div class="code" id="code"></div>
-<a class="btn" id="open" href="#">Öppna i appen</a>
-<p id="store" style="margin-top:16px"></p>
+<a class="btn" id="store" href="https://apps.apple.com/app/id6807051983">Hämta appen i App Store</a>
+<p style="margin-top:14px"><a id="open" href="#" style="color:#EDE8DE">Har du redan appen? Öppna inbjudan</a></p>
+<p style="font-size:13px">Om koden behövs i appen: <b id="code2" style="color:#E8A24B"></b></p>
 <script>
 const code=(location.hash||'').replace('#','').replace(/[^A-Za-z0-9]/g,'').toUpperCase();
 document.getElementById('code').textContent=code||'——';
 document.getElementById('open').href='fonster://j/'+code;
+document.getElementById('code2').textContent=code||'——';
 </script></div></body></html>
